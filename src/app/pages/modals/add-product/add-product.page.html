@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngIf="!product">Add Product page</ion-title>
+    <ion-title *ngIf="product">Edit Product page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="productFormGroup" (ngSubmit)="createProduct()" *ngIf="!product">
+    <br>
+    <div class="champ">
+      <ion-item>
+        <ion-input type="text" placeholder="Name" formControlName="name">
+          <ion-icon name="person" style="margin-right: 10px"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Type</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss" formControlName="type">
+          <ion-select-option *ngFor="let productType of productTypes"
+                             value="{{productType.id}}">{{productType.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+    <ion-row style="margin-right: 5%;margin-left: 5%">
+      <ion-col>
+        <ion-button (click)="Close()" style="--background: deepskyblue"
+                    expand="block">Cancel
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button type="submit" style="--background: deepskyblue"
+                    expand="block">Save
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+  <form [formGroup]="productFormGroup" (ngSubmit)="updateProduct()" *ngIf="product">
+    <br>
+    <div class="champ">
+      <ion-item>
+        <ion-input type="text" placeholder="Name" formControlName="name">
+          <ion-icon name="person" style="margin-right: 10px"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Type</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss" formControlName="type">
+          <ion-select-option *ngFor="let productType of productTypes"
+                             value="{{productType}}">{{productType.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+    <ion-row style="margin-right: 5%;margin-left: 5%">
+      <ion-col>
+        <ion-button (click)="Close()" style="--background: deepskyblue"
+                    expand="block">Cancel
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button type="submit" style="--background: deepskyblue"
+                    expand="block">Save
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-content>

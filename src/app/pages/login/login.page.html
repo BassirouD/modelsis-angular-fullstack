@@ -1,0 +1,52 @@
+<ion-content>
+  <div class="content-div">
+    <h3 style="margin-left: 5%;font-weight: bold;color: #09009b">CONNECTION</h3>
+    <br>
+    <br>
+    <div>
+      <form #f="ngForm" (ngSubmit)="onLogin(f.value)">
+        <div class="champ">
+          <div>
+            <ion-item class="div-input" lines="none" style="--background: white">
+              <ion-label position="floating">Login</ion-label>
+              <ion-input type="text"  name="username" ngModel></ion-input>
+            </ion-item>
+          </div>
+
+          <div>
+            <ion-item class="div-input" lines="none" style="--background: white">
+              <ion-label position="floating">Mot de passe</ion-label>
+              <ion-input type="password" name="password" ngModel></ion-input>
+            </ion-item>
+          </div>
+        </div>
+        <br>
+        <div class="div-button">
+          <ion-button expand="block" style="--background: #ffa400" type="submit">Se connecter</ion-button>
+        </div>
+      </form>
+      <br>
+    </div>
+
+    <ion-row style="margin-left: 10%;margin-right: 10%">
+      <ion-col class="line"></ion-col>
+      <ion-col size="2" class="ion-text-center">
+        OU
+      </ion-col>
+      <ion-col class="line"></ion-col>
+    </ion-row>
+
+    <div class="title ion-justify-content-center">
+      <ion-card class="card lecard"></ion-card>
+      <ion-card class="card lecard"></ion-card>
+      <ion-card class="card lecard"></ion-card>
+    </div>
+
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border" style="background: #f6f6f6;">
+  <div class="ion-text-center">
+    <p class="ion-text-center" style="color: #ffa400;font-size: 18px" routerLink="/inscription">Créer un compte</p>
+  </div>
+</ion-footer>

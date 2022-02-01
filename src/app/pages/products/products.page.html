@@ -1,0 +1,64 @@
+<app-layout-header></app-layout-header>
+
+<ion-content style="--background: #f6f6f6">
+  <br>
+
+  <ion-row style="margin-right: 5%;margin-left: 5%">
+    <ion-col>
+      <ion-button (click)="addModalProduct()" style="--background: deepskyblue"
+                  expand="block">Add
+      </ion-button>
+    </ion-col>
+
+    <ion-col>
+      <ion-button (click)="addModalProductType()" style="--background: deepskyblue"
+                  expand="block">Add Type
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <div style="margin-left: 3%;margin-right: 3%" class="div-table">
+    <div class="div-header-table">
+      <ion-row>
+        <ion-col class="ion-text-left">
+          <p>Name</p>
+        </ion-col>
+        <ion-col>
+          <p>Date</p>
+        </ion-col>
+        <ion-col class="ion-text-center">
+          <p>Type</p>
+        </ion-col>
+        <ion-col class="ion-text-right">
+          <p>Action</p>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div style="margin-left: 1%;margin-right: 1%">
+      <ion-row *ngFor="let product of products">
+        <ion-col>
+          <p>
+            {{product.name}}
+          </p>
+        </ion-col>
+        <ion-col>
+          <p>
+            {{product.created_date | date: 'dd-MM-yyyy'}}
+          </p>
+        </ion-col>
+        <ion-col class="ion-text-center">
+          <p>
+            <!--            {{product.prodcutType.name}}-->
+            HAHA
+          </p>
+        </ion-col>
+        <ion-col class="ion-text-right">
+          <p (click)="editModalProduct(product)">
+            Edit
+          </p>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>

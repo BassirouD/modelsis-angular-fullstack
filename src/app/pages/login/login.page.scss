@@ -1,0 +1,52 @@
+
+
+
+
+ion-content {
+  //--background: url('../../assets/images/pageBack.png') 0 0/100% 100% no-repeat;
+  padding-left: 5%;
+  --background: #f6f6f6;
+
+  .content-div {
+    //height: 65%;
+    margin-top: 15%;
+  }
+
+  .div-input {
+    border: 1.5px solid black;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-radius: 7px;
+    height: 65px;
+  }
+
+  .div-button{
+    margin: 5%;
+  }
+
+}
+
+
+.div-img{
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100px;
+  max-width: 100px;
+  margin-left: 37%;
+}
+
+.line{
+  border-bottom: 1px solid black;
+  margin-bottom: 16px;
+}
+
+.lecard{
+  width: 40px;
+  height: 40px;
+}
+
+.title{
+  align-items: center;
+  display: flex;
+}
