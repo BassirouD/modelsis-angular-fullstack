@@ -26,6 +26,10 @@ const routes: Routes = [
     path: '',
     redirectTo: '/login',
     pathMatch: 'full'
+  },
+  {
+    path: 'inscription',
+    loadChildren: () => import('./pages/inscription/inscription.module').then( m => m.InscriptionPageModule)
   }
 ];
 

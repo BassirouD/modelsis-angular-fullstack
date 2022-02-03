@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar style="--background: #f6f6f6;">
+    <ion-title style="color: black">Inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #f6f6f6;">
+  <form [formGroup]="compteFormGroup" (ngSubmit)="createCompte()">
+    <br>
+    <div class="champ">
+      <ion-item>
+        <ion-input type="text" placeholder="Name" formControlName="username">
+          <ion-icon name="person" style="margin-right: 10px"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" placeholder="Password" formControlName="password">
+          <ion-icon name="lock-closed" style="margin-right: 10px"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" placeholder="Comfirme password" formControlName="confirmedPassword">
+          <ion-icon name="lock-closed" style="margin-right: 10px"></ion-icon>
+        </ion-input>
+      </ion-item>
+    </div>
+
+    <ion-row style="margin-right: 5%;margin-left: 5%">
+      <ion-col>
+        <ion-button (click)="Close()" style="--background: deepskyblue"
+                    expand="block">Cancel
+        </ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button type="submit" style="--background: deepskyblue"
+                    expand="block">Save
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+
+  </form>
+</ion-content>

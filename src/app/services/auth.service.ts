@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {environment} from "../../environments/environment";
 import {HttpClient} from "@angular/common/http";
 import {User} from "../models/Utilisateur.model";
@@ -15,10 +15,15 @@ export class AuthService {
   username!: string;
   roles!: Array<any>;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   login(user: User) {
     return this.http.post(this.host + 'login', user, {observe: 'response'});
+  }
+
+  register(user: User) {
+    return this.http.post(this.host + 'register', user, {observe: 'response'});
   }
 
   saveToken(jwt: any) {
@@ -31,6 +36,7 @@ export class AuthService {
     const jwtHelpers = new JwtHelperService();
     let objJWT = jwtHelpers.decodeToken(this.jwtToken);
     this.username = objJWT.sub;
+    localStorage.setItem('username', this.username);
     this.user_id = objJWT.user_id;
     console.log(objJWT.user_id);
     this.roles = objJWT.roles;

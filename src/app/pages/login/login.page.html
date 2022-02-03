@@ -7,14 +7,14 @@
       <form #f="ngForm" (ngSubmit)="onLogin(f.value)">
         <div class="champ">
           <div>
-            <ion-item class="div-input" lines="none" style="--background: white">
+            <ion-item class="div-input" lines="none" style="--background: white; color: black">
               <ion-label position="floating">Login</ion-label>
               <ion-input type="text"  name="username" ngModel></ion-input>
             </ion-item>
           </div>
 
           <div>
-            <ion-item class="div-input" lines="none" style="--background: white">
+            <ion-item class="div-input" lines="none" style="--background: white; color: black">
               <ion-label position="floating">Mot de passe</ion-label>
               <ion-input type="password" name="password" ngModel></ion-input>
             </ion-item>
@@ -30,7 +30,7 @@
 
     <ion-row style="margin-left: 10%;margin-right: 10%">
       <ion-col class="line"></ion-col>
-      <ion-col size="2" class="ion-text-center">
+      <ion-col size="2" class="ion-text-center" style="color: black">
         OU
       </ion-col>
       <ion-col class="line"></ion-col>
@@ -46,7 +46,7 @@
 </ion-content>
 
 <ion-footer class="ion-no-border" style="background: #f6f6f6;">
-  <div class="ion-text-center">
-    <p class="ion-text-center" style="color: #ffa400;font-size: 18px" routerLink="/inscription">Créer un compte</p>
+  <div class="ion-text-center" (click)="creationCompte()">
+    <p class="ion-text-center" style="color: #ffa400;font-size: 18px">Créer un compte</p>
   </div>
 </ion-footer>

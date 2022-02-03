@@ -1,6 +1,6 @@
 <app-layout-header></app-layout-header>
 
-<ion-content style="--background: #f6f6f6">
+<ion-content style="--background: #f6f6f6;">
   <br>
 
   <ion-row style="margin-right: 5%;margin-left: 5%">
@@ -19,7 +19,7 @@
 
   <div style="margin-left: 3%;margin-right: 3%" class="div-table">
     <div class="div-header-table">
-      <ion-row>
+      <ion-row style="color: black">
         <ion-col class="ion-text-left">
           <p>Name</p>
         </ion-col>
@@ -35,8 +35,8 @@
       </ion-row>
     </div>
 
-    <div style="margin-left: 1%;margin-right: 1%">
-      <ion-row *ngFor="let product of products">
+    <div>
+      <ion-row *ngFor="let product of products" style="color: black">
         <ion-col>
           <p>
             {{product.name}}
@@ -49,8 +49,7 @@
         </ion-col>
         <ion-col class="ion-text-center">
           <p>
-            <!--            {{product.prodcutType.name}}-->
-            HAHA
+            {{product.prodcutType.name}}
           </p>
         </ion-col>
         <ion-col class="ion-text-right">

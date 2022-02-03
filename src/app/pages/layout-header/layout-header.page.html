@@ -1,37 +1,38 @@
-<ion-header [translucent]="true" class="ion-no-border">
-  <ion-toolbar>
-    <ion-title style="font-size: 18px;font-weight: bold">
-      User SIS
-    </ion-title>
-    <ion-buttons slot="end">
-      <ion-button>
-        <ion-icon name="notifications" class="ionSizeNotif" slot="icon-only"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <!--            <ion-avatar (click)="goOut()" slot="end">-->
-      <!--                <img src="assets/images/profile.png" alt="image">-->
-      <!--            </ion-avatar>-->
-      <ion-button slot="end" (click)="goOut()" >
-        <ion-icon name="ellipsis-vertical" class="ionSizeSetting" slot="icon-only"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-
-  <ion-toolbar>
-    <ion-row class="sticky-row">
-      <ion-col size="10">
-        <div style="margin-left: 3%">
-          <ion-input style="border: 2px solid black;border-radius: 7px" placeholder="Faire une recherche"></ion-input>
-        </div>
-      </ion-col>
-      <ion-col size="2">
-        <ion-buttons>
-          <ion-button class="classButom">
-            <ion-icon class="tailleIcon" name="search-outline" slot="icon-only"></ion-icon>
-          </ion-button>
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title style="font-size: 18px;font-weight: bold;color: black">
+            {{username}}
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button>
+                <ion-icon name="notifications" class="ionSizeNotif" slot="icon-only"></ion-icon>
+            </ion-button>
         </ion-buttons>
-      </ion-col>
-    </ion-row>
-  </ion-toolbar>
+        <ion-buttons slot="end">
+            <!--            <ion-avatar (click)="goOut()" slot="end">-->
+            <!--                <img src="assets/images/profile.png" alt="image">-->
+            <!--            </ion-avatar>-->
+            <ion-button slot="end" (click)="presentLogout()">
+                <ion-icon name="ellipsis-vertical" class="ionSizeSetting" slot="icon-only"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+    <ion-toolbar>
+        <ion-row class="sticky-row">
+            <ion-col size="10">
+                <div style="margin-left: 3%">
+                    <ion-input style="border: 2px solid black;border-radius: 7px;color: black"
+                               placeholder="Faire une recherche"></ion-input>
+                </div>
+            </ion-col>
+            <ion-col size="2">
+                <ion-buttons>
+                    <ion-button class="classButom">
+                        <ion-icon class="tailleIcon" name="search-outline" slot="icon-only"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
 </ion-header>

@@ -18,8 +18,7 @@ export class ProductsPage implements OnInit {
   ngOnInit() {
     this.productService.getAllProduct().subscribe(
       (data)=>{
-        this.products = data;
-        console.log(this.products);
+        this.products = data.data;
       }
     );
   }
@@ -27,7 +26,7 @@ export class ProductsPage implements OnInit {
   async addModalProduct() {
     const modal = await this.modalCtrl.create({
       component: AddProductPage,
-      cssClass: 'cal-modal-patient',
+      cssClass: 'modal-css_1',
     });
     await modal.present();
 
@@ -39,7 +38,7 @@ export class ProductsPage implements OnInit {
   async addModalProductType() {
     const modal = await this.modalCtrl.create({
       component: AddTypePage,
-      cssClass: 'cal-modal-patient',
+      cssClass: 'modal-css_2',
     });
     await modal.present();
 
@@ -51,7 +50,7 @@ export class ProductsPage implements OnInit {
   async editModalProduct(product) {
     const modal = await this.modalCtrl.create({
       component: AddProductPage,
-      cssClass: 'cal-modal-patient',
+      cssClass: 'modal-css_1',
       componentProps: {
         product: product
       }
